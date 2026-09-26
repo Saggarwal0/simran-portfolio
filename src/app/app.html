@@ -29,7 +29,7 @@
                         Projects
                     </li>
 
-                    <li>
+                    <li (click)="openExperience()">
                         <span class="selector"></span>
                         Experience
                     </li>
@@ -163,6 +163,182 @@
         </button>
 
         <span>SELECT PROJECT</span>
+
+    </div>
+
+</div>
+
+}
+
+@if (currentScreen() === 'experience') {
+
+<div class="experience-screen">
+
+    <!-- TOP TITLE -->
+    <header class="experience-header">
+
+        <p class="experience-label">
+            PORTFOLIO / EXPERIENCE
+        </p>
+
+        <h1>EXPERIENCE</h1>
+
+        <div class="experience-line"></div>
+
+    </header>
+
+
+    <!-- EXPERIENCE SELECTION AREA -->
+    <main class="experience-content">
+
+
+        <!-- LEFT EXPERIENCE MENU -->
+        <section class="experience-list">
+
+
+            <!-- EXPERIENCE 01 -->
+            <div class="experience-option">
+
+                <span class="experience-number">
+                    01
+                </span>
+
+                <div>
+
+                    <h2>
+                        Software Engineering Intern
+                    </h2>
+
+                    <h3>
+                        OpenStack Manila Project
+                    </h3>
+
+                    <p>
+                        Remote • JAN 2026 — APR 2026
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPERIENCE 02 -->
+            <div class="experience-option">
+
+                <span class="experience-number">
+                    02
+                </span>
+
+                <div>
+
+                    <h2>
+                        Cyber Hero Intern
+                    </h2>
+
+                    <h3>
+                        ThreatLocker
+                    </h3>
+
+                    <p>
+                        Orlando, FL • FEB 2026 — MAY 2026
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPERIENCE 03 -->
+            <div class="experience-option">
+
+                <span class="experience-number">
+                    03
+                </span>
+
+                <div>
+
+                    <h2>
+                        Application Request Engineer
+                    </h2>
+
+                    <h3>
+                        ThreatLocker
+                    </h3>
+
+                    <p>
+                        Orlando, FL • MAY 2026 — PRESENT
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- RIGHT EXPERIENCE INFORMATION -->
+        <section class="experience-preview">
+
+            <p class="experience-preview-number">
+                EXPERIENCE 01
+            </p>
+
+            <h2>
+                Software Engineering Intern
+            </h2>
+
+            <h3>
+                OpenStack Manila Project
+            </h3>
+
+            <p class="experience-preview-location">
+                Remote • JAN 2026 — APR 2026
+            </p>
+
+
+            <div class="experience-preview-divider"></div>
+
+
+            <p class="experience-description">
+                Worked on Python API and schema changes in OpenStack Manila,
+                an open-source cloud file-sharing project.
+            </p>
+
+            <p class="experience-description">
+                Reproduced issues in Linux, used Git and automated style
+                checks, and corrected syntax and formatting errors before
+                submitting changes for review.
+            </p>
+
+            <p class="experience-description">
+                Collaborated with Red Hat engineers to troubleshoot code
+                and discuss changes in a remote development team.
+            </p>
+
+
+            <p class="experience-tech">
+                PYTHON • LINUX • GIT • OPEN SOURCE
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- BOTTOM CONTROLS -->
+    <div class="experience-controls">
+
+        <button
+            class="back-button"
+            (click)="goHome()">
+            ← BACK
+        </button>
+
+        <span>
+            SELECT EXPERIENCE
+        </span>
 
     </div>
 

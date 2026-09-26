@@ -17,6 +17,10 @@ export class App {
     this.currentScreen.set('projects');
   }
 
+  openExperience() {
+    this.currentScreen.set('experience');
+    
+  }
   goHome() {
     this.currentScreen.set('home');
   }
