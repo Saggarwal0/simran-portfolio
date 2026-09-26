@@ -1,0 +1,88 @@
+/* ==========================================================
+   MENU
+========================================================== */
+
+nav{
+
+    margin-top:40px;
+    width:650px;
+
+}
+
+nav ul{
+
+    list-style:none;
+
+}
+
+nav li{
+
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px 20px;
+
+    margin-bottom:12px;
+
+    font-size:1.8rem;
+
+    color:#24386d;
+
+    border-bottom:1px solid rgba(120,140,190,.25);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+/* selector */
+
+.selector{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#ffc75c;
+
+    box-shadow:
+        0 0 10px #ffd66a,
+        0 0 25px #ffd66a;
+
+    opacity:0;
+
+    transition:.3s;
+
+}
+
+/* hover */
+
+nav li:hover{
+
+    background:
+
+    linear-gradient(
+
+        to right,
+
+        rgba(112,160,255,.85),
+
+        rgba(180,210,255,.35),
+
+        transparent
+
+    );
+
+}
+
+nav li:hover .selector{
+
+    opacity:1;
+
+}
+
