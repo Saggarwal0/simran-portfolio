@@ -34,7 +34,7 @@
                         Experience
                     </li>
 
-                    <li>
+                    <li (click)="openSkills()">
                         <span class="selector"></span>
                         Skills
                     </li>
@@ -268,10 +268,6 @@
                 class="experience-option"
                 (mouseenter)="selectExperience(0)">
 
-                <span class="experience-number">
-                    01
-                </span>
-
                 <div>
 
                     <h2>
@@ -295,10 +291,6 @@
             <div
                 class="experience-option"
                 (mouseenter)="selectExperience(1)">
-
-                <span class="experience-number">
-                    02
-                </span>
 
                 <div>
 
@@ -324,10 +316,6 @@
                 class="experience-option"
                 (mouseenter)="selectExperience(2)">
 
-                <span class="experience-number">
-                    03
-                </span>
-
                 <div>
 
                     <h2>
@@ -352,16 +340,6 @@
 
         <!-- RIGHT EXPERIENCE INFORMATION -->
         <section class="experience-preview">
-
-
-            <!-- EXPERIENCE NUMBER -->
-            <p class="experience-preview-number">
-
-                EXPERIENCE
-                {{ experiences[selectedExperience()].number }}
-
-            </p>
-
 
             <!-- JOB TITLE -->
             <h2>
@@ -468,9 +446,326 @@
             ← BACK
         </button>
 
-        <span>
-            SELECT EXPERIENCE
-        </span>
+    </div>
+
+
+</div>
+
+}
+
+@if (currentScreen() === 'skills') {
+
+<div class="skills-screen">
+
+
+    <!-- TOP TITLE -->
+    <header class="skills-header">
+
+        <h1>
+            SKILLS
+        </h1>
+
+        <div class="skills-line"></div>
+
+    </header>
+
+
+    <!-- SKILLS AREA -->
+    <main class="skills-content">
+
+
+        <!-- LEFT MENU -->
+        <section class="skills-list">
+
+
+            <!-- LANGUAGES -->
+            <div
+                class="skill-option"
+                (mouseenter)="selectSkill(0)">
+
+                <div>
+                    <h2>Languages</h2>
+                    <p>Programming & Web</p>
+                </div>
+
+            </div>
+
+
+            <!-- FRAMEWORKS -->
+            <div
+                class="skill-option"
+                (mouseenter)="selectSkill(1)">
+
+                <div>
+                    <h2>Frameworks & Technologies</h2>
+                    <p>Development Tools</p>
+                </div>
+
+            </div>
+
+
+            <!-- CERTIFICATIONS -->
+            <div
+                class="skill-option"
+                (mouseenter)="selectSkill(2)">
+
+                <div>
+                    <h2>Certifications</h2>
+                    <p>Credentials & Learning</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+        <section class="skills-preview">
+
+
+            <!-- LANGUAGES -->
+            @if (selectedSkill() === 0) {
+
+                <p class="skills-section-label">
+                    PROGRAMMING LANGUAGES
+                </p>
+
+                <h2>
+                    Languages
+                </h2>
+
+                <p class="skills-description">
+                    Languages I've used across software development,
+                    open-source work, projects, and coursework.
+                </p>
+
+
+                <div class="language-grid">
+
+
+                    <div class="language-card">
+                        <i class="devicon-python-plain colored"></i>
+                        <span>Python</span>
+                    </div>
+
+
+                    <div class="language-card">
+                        <i class="devicon-csharp-plain colored"></i>
+                        <span>C#</span>
+                    </div>
+
+
+                    <div class="language-card">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <span>C++</span>
+                    </div>
+
+
+                    <div class="language-card">
+                        <i class="devicon-c-plain colored"></i>
+                        <span>C</span>
+                    </div>
+
+
+                    <div class="language-card">
+                        <i class="devicon-java-plain colored"></i>
+                        <span>Java</span>
+                    </div>
+
+
+                    <div class="language-card">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+
+
+                    <div class="language-card">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML</span>
+                    </div>
+
+
+                    <div class="language-card">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS</span>
+                    </div>
+
+
+                    <div class="language-card ">
+                        <i class="devicon-azuresqldatabase-plain colored"></i>
+                        <span>SQL</span>
+                    </div>
+
+
+                </div>
+
+            }
+
+             <!-- FRAMEWORKS & TECHNOLOGIES GOES RIGHT HERE -->
+
+            @if (selectedSkill() === 1) {
+
+                <p class="skills-section-label">
+                    FRAMEWORKS • CLOUD • DEVELOPMENT
+                </p>
+
+                <h2>
+                    Frameworks & Technologies
+                </h2>
+
+                <p class="skills-description">
+                    Frameworks, development tools, and cloud technologies
+                    I've used across projects, coursework, and technical environments.
+                </p>
+
+                <div class="technology-grid">
+
+                    <div class="technology-card">
+                        <i class="devicon-angularjs-plain colored"></i>
+                        <span>Angular</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-dotnetcore-plain colored"></i>
+                        <span>.NET</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <span>Bootstrap</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-github-original colored"></i>
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-fastapi-plain colored"></i>
+                        <span>REST APIs</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                        <span>AWS</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-azure-plain colored"></i>
+                        <span>Azure</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <i class="devicon-googlecloud-plain colored"></i>
+                        <span>GCP</span>
+                    </div>
+
+                </div>
+
+            }
+
+            @if (selectedSkill() === 2) {
+
+    <p class="skills-section-label">
+        PROFESSIONAL CERTIFICATIONS
+    </p>
+
+    <h2>
+        Certifications
+    </h2>
+
+    <p class="skills-description">
+        Industry certifications currently in progress.
+    </p>
+
+
+    <div class="certification-list">
+
+
+        <!-- SECURITY+ -->
+        <div class="certification-card">
+
+            <div class="certification-icon">
+                +
+            </div>
+
+            <div class="certification-info">
+
+                <p class="certification-provider">
+                    COMPTIA
+                </p>
+
+                <h3>
+                    Security+
+                </h3>
+
+                <div class="certification-status">
+
+                    <span class="status-dot"></span>
+
+                    IN PROGRESS
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NETWORK+ -->
+        <div class="certification-card">
+
+            <div class="certification-icon">
+                +
+            </div>
+
+            <div class="certification-info">
+
+                <p class="certification-provider">
+                    COMPTIA
+                </p>
+
+                <h3>
+                    Network+
+                </h3>
+
+                <div class="certification-status">
+
+                    <span class="status-dot"></span>
+
+                    IN PROGRESS
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+}
+
+        </section>
+
+
+    </main>
+
+
+    <!-- BACK BUTTON -->
+    <div class="skills-controls">
+
+        <button
+            class="back-button"
+            (click)="goHome()">
+            ← BACK
+        </button>
 
     </div>
 
@@ -478,3 +773,4 @@
 </div>
 
 }
+

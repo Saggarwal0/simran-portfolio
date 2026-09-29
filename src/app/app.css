@@ -235,17 +235,51 @@ nav li:hover .selector{
 .project-option:hover {
     transform: translateX(18px);
 
-    background: rgba(255, 255, 255, 0.45);
+    background:
+        linear-gradient(
+            to right,
+            rgba(112, 160, 255, 0.85),
+            rgba(180, 210, 255, 0.35),
+            transparent
+        );
+
+    box-shadow: none;
+}
+
+/* ORANGE SELECTOR DOT */
+
+.project-option::before {
+    content: "";
+
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    left: 7px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #ffc75c;
 
     box-shadow:
-        -4px 0 0 rgba(23, 40, 73, 0.75),
-        0 10px 30px rgba(25, 55, 90, 0.08);
+        0 0 10px #ffd66a,
+        0 0 25px #ffd66a;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.project-option:hover::before {
+    opacity: 1;
 }
 
 .project-option:hover .project-number {
     opacity: 1;
 }
-
 
 /* ==========================================================
    PROJECT PREVIEW
@@ -507,18 +541,53 @@ nav li:hover .selector{
 .experience-option:hover {
     transform: translateX(18px);
 
-    background: rgba(255, 255, 255, 0.45);
+    background:
+        linear-gradient(
+            to right,
+            rgba(112, 160, 255, 0.85),
+            rgba(180, 210, 255, 0.35),
+            transparent
+        );
+
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+/* ORANGE SELECTOR DOT */
+
+.experience-option::before {
+    content: "";
+
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    left: 7px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #ffc75c;
 
     box-shadow:
-        -4px 0 0 rgba(23, 40, 73, 0.75),
-        0 10px 30px rgba(25, 55, 90, 0.08);
+        0 0 10px #ffd66a,
+        0 0 25px #ffd66a;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.experience-option:hover::before {
+    opacity: 1;
 }
 
 .experience-option:hover .experience-number {
     opacity: 1;
 }
-
-
 /* ==========================================================
    EXPERIENCE PREVIEW
 ========================================================== */
@@ -702,4 +771,523 @@ nav li:hover .selector{
 
     font-size: 11px;
     letter-spacing: 3px;
+}
+
+/* ==========================================================
+   SKILLS SCREEN
+========================================================== */
+
+.skills-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 70px 8%;
+    color: #172849;
+
+    background: #f8f9fc;
+}
+
+
+/* ==========================================================
+   SKILLS HEADER
+========================================================== */
+
+.skills-header {
+    position: relative;
+    z-index: 2;
+}
+
+.skills-header h1 {
+    margin: 0;
+    font-size: 46px;
+    font-weight: 400;
+    letter-spacing: 7px;
+    color: #24386d;
+}
+
+.skills-line {
+    width: 100%;
+    height: 1px;
+    margin-top: 18px;
+    background: rgba(36, 56, 109, 0.25);
+}
+
+
+/* ==========================================================
+   SKILLS LAYOUT
+========================================================== */
+
+.skills-content {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.35fr;
+
+    gap: 70px;
+    margin-top: 45px;
+}
+
+
+/* ==========================================================
+   LEFT MENU
+========================================================== */
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 92px;
+
+    padding: 18px 25px;
+
+    cursor: pointer;
+
+    border-bottom:
+        1px solid rgba(36, 56, 109, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.skill-option h2 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    color: #24386d;
+}
+
+.skill-option p {
+    margin: 7px 0 0;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+
+/* BLUE GAME MENU HOVER */
+
+.skill-option:hover {
+    transform: translateX(18px);
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(112, 160, 255, 0.85),
+            rgba(180, 210, 255, 0.35),
+            transparent
+        );
+}
+
+
+/* ORANGE SELECTOR DOT */
+
+.skill-option::before {
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+    top: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #ffc75c;
+
+    box-shadow:
+        0 0 10px #ffd66a,
+        0 0 25px #ffd66a;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.skill-option:hover::before {
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   RIGHT SIDE
+========================================================== */
+
+.skills-preview {
+    padding: 10px 0 0 10px;
+    max-width: 760px;
+}
+
+.skills-section-label {
+    margin: 0 0 10px;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    opacity: 0.55;
+}
+
+.skills-preview h2 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    color: #24386d;
+}
+
+.skills-description {
+    max-width: 620px;
+
+    margin: 12px 0 28px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    opacity: 0.7;
+}
+
+
+/* ==========================================================
+   LANGUAGE LOGO GRID
+========================================================== */
+
+.language-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(130px, 1fr));
+
+    gap: 16px;
+
+    max-width: 620px;
+}
+
+
+/* LANGUAGE CARD */
+
+.language-card {
+    position: relative;
+
+    height: 115px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border:
+        1px solid rgba(36, 56, 109, 0.14);
+
+    background:
+        rgba(255, 255, 255, 0.22);
+
+    backdrop-filter: blur(3px);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* LANGUAGE LOGOS */
+
+.language-card i {
+    font-size: 44px;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* LANGUAGE NAME */
+
+.language-card span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #24386d;
+
+    opacity: 0.75;
+}
+
+
+/* ==========================================================
+   LANGUAGE CARD HOVER
+========================================================== */
+
+.language-card:hover {
+    transform: translateY(-6px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(180, 210, 255, 0.45),
+            rgba(255, 255, 255, 0.18)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(70, 110, 190, 0.16);
+}
+
+.language-card:hover i {
+    transform: scale(1.15);
+
+    filter:
+        drop-shadow(
+            0 0 9px rgba(112, 160, 255, 0.8)
+        );
+}
+
+
+/* ==========================================================
+   BACK BUTTON
+========================================================== */
+
+.skills-controls {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 40px;
+    left: 8%;
+}
+
+/* ==========================================================
+   FRAMEWORKS & TECHNOLOGIES GRID
+========================================================== */
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+    gap: 16px;
+    max-width: 620px;
+}
+
+.technology-card {
+    position: relative;
+
+    height: 115px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid rgba(36, 56, 109, 0.14);
+
+    background: rgba(255, 255, 255, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.technology-card i {
+    font-size: 44px;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.technology-card span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #24386d;
+    opacity: 0.75;
+}
+
+
+/* HOVER */
+
+.technology-card:hover {
+    transform: translateY(-6px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(180, 210, 255, 0.45),
+            rgba(255, 255, 255, 0.18)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(70, 110, 190, 0.16);
+}
+
+.technology-card:hover i {
+    transform: scale(1.15);
+
+    filter:
+        drop-shadow(0 0 9px rgba(112, 160, 255, 0.8));
+}
+
+/* ==========================================================
+   CERTIFICATIONS
+========================================================== */
+
+.certification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    max-width: 620px;
+    margin-top: 28px;
+}
+
+
+.certification-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 120px;
+    padding: 22px 28px;
+
+    border-top: 1px solid rgba(36, 56, 109, 0.14);
+    border-bottom: 1px solid rgba(36, 56, 109, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.certification-card:hover {
+    transform: translateX(10px);
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(112, 160, 255, 0.16),
+            transparent
+        );
+}
+
+
+/* LARGE + SYMBOL */
+
+.certification-icon {
+    width: 75px;
+
+    margin-right: 25px;
+
+    font-size: 52px;
+    font-weight: 300;
+
+    color: #24386d;
+
+    opacity: 0.85;
+}
+
+
+/* CERT INFO */
+
+.certification-info {
+    flex: 1;
+}
+
+.certification-provider {
+    margin: 0 0 5px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    color: #24386d;
+
+    opacity: 0.55;
+}
+
+.certification-info h3 {
+    margin: 0 0 13px;
+
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    color: #24386d;
+}
+
+
+/* IN PROGRESS STATUS */
+
+.certification-status {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #24386d;
+
+    opacity: 0.7;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #ffc75c;
+
+    box-shadow:
+        0 0 6px #ffd66a,
+        0 0 12px rgba(255, 214, 106, 0.7);
+
+    animation: certificationPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes certificationPulse {
+
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+
 }

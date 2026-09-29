@@ -21,6 +21,9 @@ export class App {
     this.currentScreen.set('experience');
   }
 
+  openSkills() {
+    this.currentScreen.set('skills');
+}
 
   // 🔴🔴🔴 PASTE THE NEW EXPERIENCE CODE RIGHT HERE 🔴🔴🔴
 
@@ -164,13 +167,20 @@ export class App {
 
   selectExperience(index: number) {
     this.selectedExperience.set(index);
-  }
+}
 
-  // 🔴🔴🔴 END OF NEW EXPERIENCE CODE 🔴🔴🔴
+// 🔴🔴🔴 END OF NEW EXPERIENCE CODE 🔴🔴🔴
 
 
-  goHome() {
+selectedSkill = signal(0);
+
+selectSkill(index: number) {
+    this.selectedSkill.set(index);
+}
+
+
+goHome() {
     this.currentScreen.set('home');
-  }
+}
 
 }
