@@ -422,9 +422,9 @@ nav li:hover .selector{
     z-index: 2;
 
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
+    grid-template-columns: 0.9fr 1.35fr;
 
-    gap: 90px;
+    gap: 70px;
 
     margin-top: 45px;
 }
@@ -524,27 +524,41 @@ nav li:hover .selector{
 ========================================================== */
 
 .experience-preview {
-    padding: 18px 10px 0 10px;
+    padding: 10px 0 0 10px;
+    max-width: 760px;
 }
 
+
+/* EXPERIENCE NUMBER */
+
 .experience-preview-number {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
 
     font-size: 11px;
     letter-spacing: 4px;
 
+    text-transform: uppercase;
+
     opacity: 0.5;
 }
+
+
+/* JOB TITLE */
 
 .experience-preview h2 {
     margin: 0;
 
     font-size: 34px;
     font-weight: 400;
+
+    line-height: 1.1;
 }
 
+
+/* COMPANY */
+
 .experience-preview h3 {
-    margin: 8px 0 0;
+    margin: 7px 0 0;
 
     font-size: 17px;
     font-weight: 400;
@@ -554,8 +568,11 @@ nav li:hover .selector{
     opacity: 0.75;
 }
 
+
+/* LOCATION + DATES */
+
 .experience-preview-location {
-    margin-top: 8px;
+    margin-top: 7px;
 
     font-size: 11px;
     letter-spacing: 2px;
@@ -565,11 +582,14 @@ nav li:hover .selector{
     opacity: 0.5;
 }
 
+
+/* DIVIDER */
+
 .experience-preview-divider {
     width: 100%;
     height: 1px;
 
-    margin: 22px 0;
+    margin: 18px 0;
 
     background: linear-gradient(
         90deg,
@@ -578,27 +598,91 @@ nav li:hover .selector{
     );
 }
 
-.experience-description {
-    max-width: 570px;
 
-    margin: 0 0 15px;
+/* SECTION TITLES */
 
-    font-size: 14px;
-    line-height: 1.65;
-
-    opacity: 0.72;
-}
-
-.experience-tech {
-    margin-top: 28px;
+.experience-section-label {
+    margin: 0 0 12px;
 
     font-size: 11px;
+    font-weight: 600;
+
     letter-spacing: 2.5px;
 
-    opacity: 0.65;
+    text-transform: uppercase;
+
+    opacity: 0.75;
 }
 
 
+/* CONTRIBUTION BULLETS */
+
+.experience-bullets {
+    margin: 0;
+    padding-left: 19px;
+
+    max-width: 720px;
+}
+
+.experience-bullets li {
+    margin-bottom: 9px;
+    padding-left: 4px;
+
+    font-size: 15px;
+    line-height: 1.45;
+
+    opacity: 0.76;
+}
+
+.experience-bullets li::marker {
+    font-size: 8px;
+}
+
+
+/* SPACE BEFORE SKILLS */
+
+.experience-bullets + .experience-section-label {
+    margin-top: 30px;
+}
+
+
+/* SKILLS */
+
+.experience-tech {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 2.4;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+
+    opacity: 0.62;
+}
+
+
+/* SUBTLE ENTRANCE ANIMATION */
+
+.experience-preview {
+    animation: experienceFade 0.25s ease;
+}
+
+@keyframes experienceFade {
+
+    from {
+        opacity: 0;
+        transform: translateX(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
 /* ==========================================================
    EXPERIENCE BOTTOM CONTROLS
 ========================================================== */
