@@ -39,7 +39,7 @@
                         Skills
                     </li>
 
-                    <li>
+                    <li (click)="openAbout()"> 
                         <span class="selector"></span>
                         About
                     </li>
@@ -774,3 +774,55 @@
 
 }
 
+@if (currentScreen() === 'about') {
+
+<div class="about-screen">
+
+    <div class="story-stage">
+
+        <div class="story-heading">
+            <p>ORIGIN STORY</p>
+            <h1>THE PLAYER BEHIND THE CODE</h1>
+        </div>
+
+        <div class="story-scene">
+
+            <div class="scene-placeholder">
+                <p>SCENE 01</p>
+                <span>Artwork will go here</span>
+            </div>
+
+        </div>
+
+        <div class="dialogue-box">
+
+            <div class="dialogue-name">
+                SIMRAN
+            </div>
+
+            <p class="dialogue-text">
+    {{ displayedDialogue() }}
+
+    @if (!dialogueFinished()) {
+        <span class="typing-cursor">|</span>
+    }
+</p>
+
+            @if (dialogueFinished()) {
+                <span class="dialogue-next">▼</span>
+            }
+        </div>
+
+        <button class="story-back" (click)="goHome()">
+            ← BACK
+        </button>
+
+        <button class="story-skip">
+            SKIP STORY
+        </button>
+
+    </div>
+
+</div>
+
+}

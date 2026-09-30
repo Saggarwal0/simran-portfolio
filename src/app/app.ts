@@ -23,6 +23,51 @@ export class App {
 
   openSkills() {
     this.currentScreen.set('skills');
+
+  }
+
+  openAbout() {
+    this.currentScreen.set('about');
+
+    this.displayedDialogue.set('');
+    this.dialogueFinished.set(false);
+
+    setTimeout(() => {
+        this.startDialogue();
+    }, 800);
+}
+
+  goHome() {
+    this.currentScreen.set('home');
+}
+
+fullDialogue = "It started when I was twelve...";
+displayedDialogue = signal('');
+dialogueFinished = signal(false);
+
+startDialogue() {
+    this.displayedDialogue.set('');
+    this.dialogueFinished.set(false);
+
+    let index = 0;
+
+    const typeNextCharacter = () => {
+        if (index < this.fullDialogue.length) {
+
+            this.displayedDialogue.set(
+                this.fullDialogue.substring(0, index + 1)
+            );
+
+            index++;
+
+            setTimeout(typeNextCharacter, 70);
+
+        } else {
+            this.dialogueFinished.set(true);
+        }
+    };
+
+    typeNextCharacter();
 }
 
   // 🔴🔴🔴 PASTE THE NEW EXPERIENCE CODE RIGHT HERE 🔴🔴🔴
@@ -176,11 +221,6 @@ selectedSkill = signal(0);
 
 selectSkill(index: number) {
     this.selectedSkill.set(index);
-}
-
-
-goHome() {
-    this.currentScreen.set('home');
 }
 
 }
